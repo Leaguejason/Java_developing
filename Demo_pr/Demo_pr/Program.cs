@@ -15,6 +15,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddAuthorization(options => options.AddPolicy("Admin", policy => policy.RequireUserName("admin@mvc.web")));
+builder.Services.AddAuthorization(options => options.AddPolicy("Adder", policy => policy.RequireUserName("add@mvc.web")));
+builder.Services.AddAuthorization(options => options.AddPolicy("Viewer", policy => policy.RequireUserName("view@mvc.web")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

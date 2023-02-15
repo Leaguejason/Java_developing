@@ -43,7 +43,7 @@ namespace Practice2.Controllers
             return View(exam);
         }
 
-        [Authorize(Roles = "Admin,Adder,admin")]
+        [Authorize(Roles = "Admin,Adder")]
         public IActionResult Create()
         {
             return View();
